@@ -1,0 +1,23 @@
+{
+  "name": "express responder",
+  "version": "1.0.0",
+  "description": "responder by react and express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "React",
+    "Websocket",
+    "express"
+  ],
+  "author": "suvllian",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1",
+    "socket.io": "^1.7.2"
+  }
+}
