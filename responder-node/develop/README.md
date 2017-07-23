@@ -1,4 +1,4 @@
-## 抢答器(Node) Release版本
+## 抢答器(Node) Develop版本
 
 ### 运行步骤
 ```
