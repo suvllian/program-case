@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Button, message } from 'antd'
 import { Link, hashHistory } from 'react-router'
+import getBtnRadius from './../../utils/getBtnRadius.js'
 import store from './../../utils/store.js'
 
 import loginBg from './../../assets/login_bg.png'
@@ -12,6 +13,13 @@ const bgStyle = {
 class Home extends Component {
 	constructor(props) {
 		super(props)
+
+    this.state = {
+      btnStyle: {
+        height: 400,
+        width: 400
+      }
+    }
 
     this.socket = io()
     this.resetStore = this.resetStore.bind(this)
@@ -25,6 +33,22 @@ class Home extends Component {
     if (this.userNumber !== 'baiji' || this.userName !== 'baiji') {
       hashHistory.push("/login")
     }  
+
+    // 设置按钮宽度
+    this.setBtnHeight()
+  }
+
+  setBtnHeight() {
+    let radius = getBtnRadius()
+
+    if (radius) {
+      this.setState({
+        btnStyle: {
+          height: radius,
+          width: radius
+        }
+      })
+    }
   }
 
   resetStore() {
@@ -35,20 +59,19 @@ class Home extends Component {
   }
 
 	render() {
-    
+    const { btnStyle } = this.state
+
     return (
     	<div className="home-page" style={bgStyle}>
         <div className="home-header">
-          <div className="header-logo">
-            <img src={require('./../../assets/logo.jpg')} />
-          </div>
+          <div className="header-logo"></div>
 
           <div className="header-png">
             <img src={require('./../../assets/baiji.png')} />
           </div>
         </div>
 
-        <div className="answer-btn">
+        <div className="answer-btn" style={btnStyle}>
           <Button type="primary" onClick={this.resetStore}>开始</Button>
         </div>
 

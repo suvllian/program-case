@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { Button } from 'antd'
 import { Link, hashHistory } from 'react-router'
 import store from './../../utils/store.js'
+import getBtnRadius from './../../utils/getBtnRadius.js'
 import './index.scss'
 
 import loginBg from './../../assets/login_bg.png'
@@ -15,7 +16,11 @@ class Home extends Component {
 		super(props);
 
     this.state = {
-      isAnswer: false
+      isAnswer: false,
+      btnStyle: {
+        height: 400,
+        width: 400
+      }
     }
 
     this.socket = io()
@@ -34,10 +39,26 @@ class Home extends Component {
 
     // 服务器端触发重置事件，按钮重置
     this.socket.on('reset', this.resetBtn)
+
+    // 设置按钮宽度
+    this.setBtnHeight()
   }
 
   componentWillUnmount() {
     this.socket.removeListener('reset', this.resetBtn)
+  }
+
+  setBtnHeight() {
+    let radius = getBtnRadius()
+
+    if (radius) {
+      this.setState({
+        btnStyle: {
+          height: radius,
+          width: radius
+        }
+      })
+    }
   }
 
   resetBtn() {
@@ -50,7 +71,11 @@ class Home extends Component {
     let formData = new FormData(),
         currentTime = new Date()
 
-    let timeStamp = `${currentTime.getHours()}：${currentTime.getMinutes()}：${currentTime.getSeconds()}：${currentTime.getMilliseconds()}`
+    let hours = currentTime.getHours() > 9 ? currentTime.getHours() : `0${currentTime.getHours()}`,
+        minutes = currentTime.getMinutes() > 9 ? currentTime.getMinutes() : `0${currentTime.getMinutes()}`,
+        seconds = currentTime.getSeconds() > 9 ? currentTime.getSeconds() : `0${currentTime.getSeconds()}`
+
+    let timeStamp = `${hours}:${minutes}:${seconds}:${currentTime.getMilliseconds()}`
     
     let answerData = {
       userNumber: this.userNumber,
@@ -66,20 +91,18 @@ class Home extends Component {
 
 	render() {
     const isAnswer = this.state.isAnswer || store.get("isAnswer")
+    const { btnStyle } = this.state
     
     return (
     	<div className="home-page" style={bgStyle}>
         <div className="home-header">
-          <div className="header-logo">
-            <img src={require('./../../assets/logo.jpg')} />
-          </div>
-
+          <div className="header-logo"></div>
           <div className="header-png">
             <img src={require('./../../assets/baiji.png')} />
           </div>
         </div>
 
-        <div className="answer-btn">
+        <div className="answer-btn" style={btnStyle}>
           <Button disabled={isAnswer} type="primary" onClick={this.answer}>抢答</Button>
         </div>
 

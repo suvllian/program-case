@@ -1,5 +1,5 @@
 {
-  "name": "express responder",
+  "name": "express-responder",
   "version": "1.0.0",
   "description": "responder by react and express",
   "main": "index.js",
