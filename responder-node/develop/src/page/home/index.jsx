@@ -95,13 +95,6 @@ class Home extends Component {
     
     return (
     	<div className="home-page" style={bgStyle}>
-        <div className="home-header">
-          <div className="header-logo"></div>
-          <div className="header-png">
-            <img src={require('./../../assets/baiji.png')} />
-          </div>
-        </div>
-
         <div className="answer-btn" style={btnStyle}>
           <Button disabled={isAnswer} type="primary" onClick={this.answer}>抢答</Button>
         </div>

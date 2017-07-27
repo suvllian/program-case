@@ -66,11 +66,6 @@ class loginForm extends Component {
   render() {
     return (
       <div className="login-page">
-        <div className="home-header">
-          <div className="header-logo">
-            <img src={require('./../../../assets/logo.jpg')} />
-          </div>
-        </div>
         <Form onSubmit={this.handleSubmit} className="login-form">
           <FormItem>
             <p className="login-form-title">LOG IN</p>

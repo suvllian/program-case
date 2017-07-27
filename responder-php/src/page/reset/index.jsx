@@ -32,14 +32,6 @@ class Home extends Component {
 	render() { 
     return (
     	<div className="home" style={bgStyle}>
-        <div className="home-header">
-          <div className="header-logo">
-            <img src={require('./../../assets/logo.jpg')} />
-          </div>
-          <div className="header-png">
-            <img src={require('./../../assets/baiji.png')} />
-          </div>
-        </div>
         <div className="answer-btn">
           <Button type="primary" onClick={this.resetStore}>重置</Button>
         </div>
