@@ -1,0 +1,74 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: #eee;
+	padding: 50px;
+	color: #89867e;
+	font-family: "Lato",Calibri,Arial,sans-serif;
+}
+
+li{
+	list-style: none;
+}
+
+input[type=text]{
+	height: 36px;
+	width:228px;
+	border: 1px solid #333;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px #333;
+	padding-left: 15px;
+}
+
+#send-btn{
+	position: relative;
+	left: 32px;
+	color: #89867e;
+	font-family: "Lato",Calibri,Arial,sans-serif;
+	text-decoration: none;
+	font-size: 26px;
+	text-shadow: 1px 1px 1px #333;
+}
+
+#content{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#room{
+	background-color: #ddd;
+	margin-bottom:1em; 
+}
+
+#message{
+	width: 690px;
+	height: 300px;
+	overflow: auto;
+	background-color: #eee;
+	margin-bottom: 1em;
+	margin-right: 10px;
+}
+
+#help{
+	position: relative;
+	top: 36px;
+	font-size: 24px;
+}
+
+.room-list{
+	float: right;;
+	width:100px;
+	height: 300px;
+	overflow: auto;
+}
+
+.room-list div{
+	border-bottom: 1px solid #eee;
+}
+
+.room-list div:hover{
+	background-color: #ddd;
+}

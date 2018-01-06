@@ -1,0 +1,15 @@
+{
+  "name": "chatrooms",
+  "version": "0.0.1",
+  "description": "Minimalist multiroom chat server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "suvllian",
+  "license": "ISC",
+  "devDependencies": {
+    "mime": "^1.3.4",
+    "socket.io": "^1.6.0"
+  }
+}

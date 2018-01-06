@@ -1,0 +1,31 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "a simple resume example",
+  "main": "index.html",
+  "scripts": {
+    "test": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suvllian/resume.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "suvllian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suvllian/resume/issues"
+  },
+  "homepage": "https://github.com/suvllian/resume#readme",
+  "dependencies": {
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-css": "^0.1.0",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}

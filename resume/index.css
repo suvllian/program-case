@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style: none;
+}
+
+body{
+	min-width: 1200px;
+	font-family: consolas,Menlo,PingFang SC,Microsoft YaHei,monospace;
+	font-size: 16px;
+	background: #e0e0e0 none repeat scroll 0 0;
+}
+
+.container{
+	width: 950px;
+	height: 1200px;
+	margin: 0 auto;
+	background-color: #eee;
+	padding: 20px;
+}
+
+p, li{
+	line-height: 1.8;
+	word-break:break-all;
+}
+
+h1, h2{
+	text-align: center;
+	margin: 10px 0px;
+}
+
+h3, h4{
+	margin: 10px 0px;
+}
+
+aside{
+	width: 400px;
+	height: 1200px;
+	float: left;
+	background-color: #fff;
+}
+
+article{
+	width: 500px;
+	height: 1200px;
+	float: right;
+	padding: 10px;
+}
+
+section header{
+	padding: 6px 20px;
+	background-color: #aaa;
+	border-radius: 3px;
+	margin: 10px 0;
+}
+
+section ul{
+	padding: 16px;
+}
+
+section ol{
+	padding-left: 28px;
+}
+
+section ol li{
+	list-style-type: decimal;
+}
+
+.fa{
+	margin: 0 0.48em 0 0;
+	max-width: 16px;
+}
+
+.skill{
+	border-bottom: 1px solid #aaa;
+	padding: 6px 10px;
+}
+
+.skill::before{
+	width: 6px;
+	height: 24px;
+	content: "";
+	position: relative;
+	display: inline-block;
+	left: -10px;
+	top: 12px;
+	background-color: #aaa;
+}
