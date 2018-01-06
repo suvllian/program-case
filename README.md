@@ -1,5 +1,5 @@
 # something-fun
-### [我的简历](./resumt)
+### [我的简历](./resume)
 ### [抢答器(PHP)](./responder/php)
 ### [抢答器(Node)](./responder/node)
 ### [在线聊天室(Node)](./chatrooms/node)
