@@ -1,0 +1,185 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+body{
+	overflow:hidden;
+}
+
+$height: 72px;
+
+.music-warper{
+	width:500px;
+	height:$height;
+	background-color:#fff;
+	border-radius:3px;
+	margin: 20px auto;
+	box-shadow:1px 1px 10px 1px #aaa;
+	overflow:hidden;
+}
+
+// 封面
+.music-cover{
+	width: $height;
+	height: $height;
+	float: left;
+	position:relative;
+
+	img{
+		height: 100%;
+		width: 100%;
+		filter:brightness(0.72);
+	}
+
+	.fa{
+		color: #fff;
+		font-size: 42px;
+		opacity: 0.88;
+	}
+}
+
+// 暂停 播放按钮
+.button{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	cursor:pointer;
+}
+
+// 音乐信息
+.music-info{
+	padding-bottom:6px;
+	margin-bottom:6px;
+}
+
+// 歌名
+.music-name{
+	color: #333;
+    font-size: 15px;
+}
+
+// 歌手
+.music-singer{
+	color: #666;
+    font-size: 12px;
+}
+
+// 控制块
+.music-control{
+	display:flex;
+	position:relative;
+}
+
+
+// 时间进度条块
+.music-time-bar{
+	width: 100%;
+	flex:1 1 0;
+	padding:4px 0;
+}
+
+// 时间进度条
+.time-control{
+	height: 3px;
+	width: 100%;
+	background-color:#e0e0e0;
+	position: relative;
+	overflow: hidden;
+	transition:1s all ease;
+	cursor: pointer;
+
+	.current-time{
+		background-color: rgb(107, 189, 122);
+		height: 3px;
+		width: 100%;	
+		position:absolute;
+		top: 0;
+		left: -100%;
+		transition:0.01s all ease;
+		display: inline-block;
+	}
+}
+
+
+
+// 右侧控制选项
+.music-button{
+	position:relative;
+	bottom:8px;
+	left:4px;
+}
+
+// 音乐时间文字显示
+.music-time{
+	color: #9b9b9b;
+	font-size: 12px;
+}
+
+.music-volume-bar{
+	overflow: hidden;
+
+	&:hover{
+		.volume-control{
+			width: 55px;
+		}
+	}
+}
+
+.volume-control{
+	height: 2px;
+	width: 0px;
+	position:relative;
+	left: 6px;
+	display: inline-block;
+	transition:1s width ease;
+	background-color: rgb(229, 229, 232);
+	cursor: pointer;
+}
+
+.current-volume{
+	background-color: rgb(151, 151, 151);
+	width: 100%;
+	height: 2px;
+	position:absolute;
+	top: 0;
+	display: inline-block;
+}
+
+.music-container{
+	margin-left:88px;
+	padding:14px 10px 0px 10px;	
+}
+
+.buttons{
+	margin-top: 48px;
+	display:none;
+
+	span{
+		cursor: pointer;
+		font-size: 22px;
+		display: inline-block;
+		width: 50px;
+		height: 30px;
+		opacity: 0.8;
+		transition: 1s all ease;
+
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+
+
+@media screen and (max-width:550px) {
+	.music-warper{
+		width:96%;
+		margin: 20px auto;
+	}
+}

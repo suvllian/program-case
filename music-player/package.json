@@ -1,0 +1,32 @@
+{
+  "name": "music-player",
+  "version": "1.0.0",
+  "description": "仿豆瓣FM的音乐播放器",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suvllian/music-player.git"
+  },
+  "author": "suvllian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suvllian/music-player/issues"
+  },
+  "homepage": "https://github.com/suvllian/music-player#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "css-loader": "^0.26.2",
+    "node-css": "^0.1.0",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2"
+  }
+}
