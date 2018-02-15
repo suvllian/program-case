@@ -4,4 +4,5 @@
 ### [抢答器(Node)](./responder/node)
 ### [在线聊天室(Node)](./chatrooms/node)
 ### [文件批量重命名(PHP)](./file-rename/php)
-### [读取txt文件内容插入到数据库(Node)](./load-txt-to-database/node)
+### [读取txt文件内容插入到数据库(Node)](./load-txt-to-database)
+### [音乐播放器](./music-player)
