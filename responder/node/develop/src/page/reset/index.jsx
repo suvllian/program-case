@@ -67,7 +67,7 @@ class Home extends Component {
           <div className="header-logo"></div>
 
           <div className="header-png">
-            <img src={require('./../../assets/baiji.png')} />
+            <img src={require('./../../assets/login_bg.png')} />
           </div>
         </div>
 
