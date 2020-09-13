@@ -32,3 +32,10 @@
 * 思路
 * 技术选型：
 * Demo：[音乐播放器](./code/music-player)
+
+### 将前端页面内容导出成图片
+* 思路：将需要导出成图片的内容区域的DOM结构传入html2canvas中，可以生成canvas图片或者base64转码的图片形式，最后调用端上的API将图片保存到本地
+* 技术选型：html2canvas
+* Demo
+* 相关文档：
+  * [html2canvas github](https://github.com/niklasvh/html2canvas)
